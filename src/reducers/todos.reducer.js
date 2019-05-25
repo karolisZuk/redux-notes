@@ -7,11 +7,9 @@ export default todos = (state = [], action) => {
                     text: action.text,
                     completed: false
                 }
-            ]
+            ];
         case 'TOGGLE_TODO':
-            return {
-
-            }
+            return [...state];
         default:
             return state;
     }

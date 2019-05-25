@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import AddTodo from './containers/AddTodo';
 
 class TodoApp extends Component {
     render(){
         return (
             <View style={styles.container}>
-                <Text>Hello from todo app!</Text>
+                <AddTodo />
             </View>
         )
     }
