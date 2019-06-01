@@ -5,6 +5,7 @@ import { View,
          TouchableOpacity } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { connect } from 'react-redux';
+import { addTodo } from '../actions';
 
 class AddTodo extends React.Component {
 
@@ -14,11 +15,7 @@ class AddTodo extends React.Component {
 
     addTodo(){
         //dispatch action to update store
-        this.props.dispatch({
-            type: 'ADD_TODO',
-            text: this.state.text,
-            id: 0
-        });
+        this.props.dispatch(addTodo(text));
         this.setState({ text: '' })
     }
 
