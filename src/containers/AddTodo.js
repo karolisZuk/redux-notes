@@ -14,8 +14,7 @@ class AddTodo extends React.Component {
     }
 
     addTodo(){
-        //dispatch action to update store
-        this.props.dispatch(addTodo(text));
+        this.props.dispatch(addTodo(this.state.text));
         this.setState({ text: '' })
     }
 
